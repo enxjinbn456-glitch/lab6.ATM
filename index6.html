@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  2. 23т хуваагддаг тоонууд
+    // for(let i = 1000; i>=500; i--){
+    //     if (i%23==0){
+    // console.log(i);
+    //     }
+    // }
+ 
+
+
+let utga;
+ let uldegdel = 0;
+while (utga != "123") {
+utga = prompt("Та нууц үгээ оруулна уу...");
+
+if (utga == "123") {
+while (true) {
+let uildel = prompt(
+"1. Орлого оруулна.\n 2. Зарлага гаргана\n 3. Үлдэгдэл харна\n 4. Гарах"
+);
+
+if (uildel == "1") {
+orlogo();
+
+} else if (uildel == "2") {
+zarlaga();
+
+} else if (uildel == "3") {
+alert("Таны дансны үлдэгдэл: " + uldegdel);
+
+} else if (uildel == "4") {
+alert("Системээс гарлаа.");
+break;
+
+} else {
+alert("1-4 хооронд сонголт хийнэ үү!");
+}
+}
+} else {
+alert("Нууц үг буруу байна! Дахин оролдоно уу.");
+}
+}
+
+function orlogo() {
+let orDun = parseInt(prompt("Та орлого оруулах мөнгөний дүнгээ оруулна уу:"));
+if (orDun > 0) {
+uldegdel += orDun;
+alert("Орлого нэмэгдлээ! Шинэ үлдэгдэл: " + uldegdel);
+} else {
+alert("Буруу дүн орууллаа!");
+}
+}
+
+function zarlaga() {
+let zarDun = parseInt(prompt("Та зарлага гаргах мөнгөний дүнгээ оруулна уу:"));
+if (zarDun > 0) {
+if (zarDun <= uldegdel) {
+uldegdel -= zarDun;
+alert("Зарлага гарлаа! Шинэ үлдэгдэл: " + uldegdel);
+} else {
+alert("Таны үлдэгдэл хүрэлцэхгүй!");
+}
+} else {
+alert("Буруу дүн орууллаа!");
+}
+}
+
+
+
+//  let ug = "Javascript";
+//  let vseg = "";
+//  for (let i =0; i<ug.length; i++) { // ug dotor baigaa vseg bvriig tus bvr shalgah davtalt
+    
+//     if(ug[i]=="a") {
+//         vseg +="d"; //a vsgiig d bolgoj nemne
+//  } else {
+//     vseg+= ug[i];  //a bish vsgiig uurchlulgvi nemne
+//  }
+//  }
+//  console.log(vseg); 
+
+//     </script>
+// </body>
+// </html>
+
